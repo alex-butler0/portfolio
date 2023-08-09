@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Alex Butler | Engineering Student | Aspiring Web Developer | Montreal | Halifax</title>
+    <title>Alex Butler | Portfolio Home</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <!-- Uses: Bootstrap  -->
 </head>
@@ -22,18 +23,20 @@
         <div class="menu_content">
             <a class="menu_link" href="#about">
                 <h4 class="menu_title">About</h4>
-                
-                <h6 class="menu_subtitle mt-1">READ BIO</h6>
+                <svg class="menu_icon">
+                    
+                </svg>
+                <h6 class="menu_subtitle">READ BIO</h6>
             </a>
             <a class="menu_link" href="#work">
                 <h4 class="menu_title">Work</h4>
                 
-                <h6 class="menu_subtitle mt-1">VIEW WORK</h6>
+                <h6 class="menu_subtitle">VIEW WORK</h6>
             </a>
             <a class="menu_link" href="#contact">
                 <h4 class="menu_title">Contact</h4>
                 
-                <h6 class="menu_subtitle mt-1">GET IN CONTACT</h6>
+                <h6 class="menu_subtitle">GET IN CONTACT</h6>
             </a>
 
         </div>
@@ -52,23 +55,23 @@
                 2x Containers, right, lg column, sm row
          -->
     <section id="about" class="section">
-        <div class="container w-100">
-            <div class="about_logo d-flex justify-content-end">
+        <div class="about_hero container w-100">
+            <!-- <div class="about_logo d-flex justify-content-end">
                 <img class="named_logo" src="img/placeholder.png" alt="Named Alex Butler Logo">
-            </div>
+            </div> -->
             <div class="row">
-                <div class="about_img col-lg-6 d-flex align-items-center">
-                    <img class="w-100" src="img/placeholder.png" alt="Photo of Alex Butler">
+                <div class="about_img col-lg-6">
+                    <img class="w-100" src="img/self.jpg" alt="Photo of Alex Butler">
                 </div>
                 <div class="about_text col-lg-6 d-flex flex-column">
                     <h1 class="about_head"><strong>I'm Alex Butler. An Engineering Student and Web Developer based in Quebec.</strong></h1>
-                    <p class="about_subhead">I am a passionate self-starter specializing in bioengineering, engineering design, and full-stack web development. 
-                        If you have a project that needs some awesome skills, I'm your guy.</p>
+                    <p class="about_subhead w-100">I am a passionate self-starter specializing in bioengineering, engineering design, and full-stack web development. 
+                        If you have a project you'd like to collaborate on, send me a message!</p>
                 </div>
             </div>
         </div>
 
-        <div class="container w-100">
+        <div class="about_info container w-100">
             <div class="row">
                 <div class="about_describe col-lg-8 d-flex flex-column justify-content-evenly">
                     <p class="py-4">Talking about me</p>
@@ -139,7 +142,35 @@
                         Social media icons, font-awesome, round
          -->
     <section id="contact" class="section">
-        
+        <div class="container">
+            <div class="row">
+                <div class="contact_text col-lg-5 text-left">
+                    <h1>Let's talk business</h1>
+                    <p>Now that you know a lot about me, let me know if you are interested in working together.</p>
+                    <p>Currently available for Contract and Part-Time work.</p>
+                </div>
+                <form class="contact_form col-lg-7 d-flex flex-column justify-content-evenly">
+                    <h6 class="input_title mb-1">Name</h6>
+                    <input id="name" class="mb-3" type="text">
+                    <h6 class="input_title mb-1">Email</h6>
+                    <input id="email" class="mb-3" type="email">
+                    <h6 class="input_title mb-1">Message</h6>
+                    <textarea id="message" type="text"></textarea>
+                    <button id="send_message" class="text-center mt-2" type="button">LET'S GET STARTED</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="footer" class="section">
+        <div class="footer_flex w-100 d-flex justify-content-between">
+            <h6 class="footer_text align-self-end">Copyright &copy; 2023</h6>
+            <div class="footer_icons">
+                <a href="https://www.linkedin.com/in/alexander-s-butler/" class="fa fa-linkedin" alt="LinkedIn Icon"></a>
+                <a href="https://www.facebook.com/alex.butler.79025648/" class="fa fa-facebook" alt="Facebook Icon"></a>
+                <a href="https://www.instagram.com/alexbutler832/" class="fa fa-instagram" alt="Instagram Icon"></a>
+            </div>
+        </div>                  
     </section>
 <!-- Contact End -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
