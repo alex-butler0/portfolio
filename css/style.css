@@ -6,10 +6,8 @@
 
 
 /* General Styling */
-
 html {
     height: 100vh;
-    width: 98vw;
     margin: 0;
     padding: 0;
 }
@@ -22,10 +20,15 @@ body {
     margin: 0;
     padding: 0;
     margin-left: 200px !important;
-    
 }
 
 a:link {text-decoration: none;}
+
+@media (max-width: 992px) {
+    .section {
+        margin-left: 0px !important;
+    }
+}
 /* End General Styling */
 
 /* Menu Styling */
@@ -43,12 +46,15 @@ a:link {text-decoration: none;}
 
 .menu_content {
     width: 100%;
+    display: block;
 }
 
 .menu_link {
     text-align: center;
-    display: block;
-    margin-top: 8vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6.5vh 0 6.5vh;
     color: white;
 }
 
@@ -56,10 +62,28 @@ a:link {text-decoration: none;}
     opacity: 0.7;
 }
 
+.menu_title {
+    margin: 0;
+}
 
+.menu_img {
+    width: 200px;
+    margin-bottom: 0.25rem;
+    margin-top: 0.25rem;
+}
+
+@media (max-width: 992px) {
+    #menu {
+        visibility: hidden;
+    }
+}
 /* End Menu Styling */
 
-/* About Styling */
+/* Head Styling */
+#head {
+    overflow: hidden;
+}
+
 .named_logo {
     position: relative;
     top: 0;
@@ -67,40 +91,92 @@ a:link {text-decoration: none;}
     /* background-color: #6325e2 */
 }
 
-.about_img {
-    z-index: 2;
+.head_img {
     padding-top: 5vh;
-    padding-left: 5vh !important;
-    padding-bottom: 5vh !important;
 }
-
-.about_text {
-    position: relative;
-    top: 15vh;
-    right: 6%;
-    z-index: 2;
+.head_text {
     color: white;
 }
 
-.about_head {
-    width: 70%;
-    padding-bottom: 8vh;
+
+
+@media (min-width: 992px) {
+    .head_img {
+    z-index: 2;
+    padding-left: 5vh !important;
+    padding-bottom: 5vh !important;
+    }
+
+    .head_text {
+        position: relative;
+        top: 15vh;
+        right: 8vh;
+        z-index: 2;
+    }
 }
 
+@media (min-width: 1076px) {
+    .head_title {
+        width: 92%;
+        padding-bottom: 10vh;
+    }
+}
+
+@media (min-width: 1200px) {
+    .head_title {
+        width: 92%;
+        padding-bottom: 16vh;
+    }
+}
+
+@media (max-width: 992px) {
+    #head {
+        width: 100%;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    .head_img {
+        width: 100%;
+
+        margin: 0;
+    }
+    .head_text {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+@media (max-width: 1076px) {
+    .head_title {
+        width: 92%;
+        padding-bottom: 6vh;
+    }
+}
+
+/* End Head Styling */
+
+/* About Styling */
+#about {
+    background-color: #6e6159;
+}
 .about_info {
     padding-top: 2vh;
-    background-color: #6e6159;
     padding-bottom: 3vh;
 }
 
 .about_link {
     text-align: center;
+    margin: 1rem 0 1rem;
 }
 
 .about_link:hover {
     opacity: 0.7;
 }
 
+.about_title {
+    margin-top: 0.3rem;
+}
 /* End About Styling */
 
 /* Work Styling */
@@ -117,9 +193,31 @@ a:link {text-decoration: none;}
 
 .work_grid {
     display: grid;
-    justify-items: center;
-    align-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 576px) {
+    .work_grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .work_link {
+        display: grid;
+        padding: 3vh;
+    }
+
+    .work_img {
+        max-width: 600px;
+        justify-self: center;
+    }
+}
+
+
+@media (max-width: 476px) {
+    .work_link {
+        padding: 2vh !important
+    }
 }
 /* End Work Styling */
 
@@ -136,7 +234,7 @@ a:link {text-decoration: none;}
     font-size: 29px !important;
     text-align: center !important;
     line-height: 40px !important;
-    
+    margin: 0 1.5vh 0;
   }
 
 .fa:hover {
@@ -157,20 +255,32 @@ a:link {text-decoration: none;}
 .fa-linkedin {
     background: #007bb5;
     color: white;
+    margin-left: 0 !important;
 }
 
-#footer {
-    padding-top: 3vh;
-    background-color: #779ab4;
+.copyright {
+    margin: 1rem 0 0.38rem !important;
 }
 
-.footer_text {
-    margin-left: 1vh;
-    margin-bottom: 1vh;
+.contact_boxleft.contact_form {
+    padding: 0 0.3rem 0 !important
 }
 
-.footer_icons {
-    margin-right: 1vh;
-    margin-bottom: 1vh;
+.contact_text {
+    height: 100% !important;
+    width: 100% !important;
+}
+
+.contact_icons {
+    height: 100% !important;
+    padding: 0.5vh 0.3rem 1vh;
+    padding-right: 1vh;
+    padding-bottom: 1vh;
+    align-items: center !important;
+    justify-content: center;
+}
+
+.contact_button {
+    margin-bottom: 0.38rem;
 }
 /* End Contact Styling */
